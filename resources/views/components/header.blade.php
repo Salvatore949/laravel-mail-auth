@@ -4,7 +4,7 @@
 @auth
 
 <a href="{{route('logout')}}"> LOGOOUT </a>
-
+<h2>  hello {{Auth::user() ->name}}  </h2> 
 
 @else
 
@@ -18,7 +18,7 @@
     <input type="password" name="password"><br>
 
     <input type="submit" value="Login"><br>
-    
+
 </form>
 
 <form action="{{route('register')}}" method="POST">
@@ -38,9 +38,7 @@
         <input type="submit" value= "Register">
     </form>
 
-
 @endauth
-
 
 </header>
 

@@ -2,6 +2,6 @@
 @section('content')
 
 
-<events-component></events-component>
+<events-component user="{{Auth::check()}}"></events-component>
 
 @endsection

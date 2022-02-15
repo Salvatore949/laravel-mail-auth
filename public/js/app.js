@@ -1925,11 +1925,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       videogames: []
     };
+  },
+  props: {
+    user: String
   },
   mounted: function mounted() {
     var _this = this;
@@ -37537,7 +37542,15 @@ var render = function () {
       "table",
       { attrs: { border: "2" } },
       [
-        _vm._m(0),
+        _c("tr", [
+          _c("th", [_vm._v("TITOLO")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("SOTTOTITOLO")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("RATING")]),
+          _vm._v(" "),
+          _vm.user ? _c("th", [_vm._v(" Action")]) : _vm._e(),
+        ]),
         _vm._v(" "),
         _vm._l(_vm.videogames, function (videogame) {
           return _c("tr", { key: videogame.id }, [
@@ -37546,6 +37559,8 @@ var render = function () {
             _c("td", [_vm._v(_vm._s(videogame.sottotitolo))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(videogame.rating))]),
+            _vm._v(" "),
+            _vm.user ? _c("td", [_c("button", [_vm._v("Delete")])]) : _vm._e(),
           ])
         }),
       ],
@@ -37553,20 +37568,7 @@ var render = function () {
     ),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("th", [_vm._v("TITOLO")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("SOTTOTITOLO")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("RATING")]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

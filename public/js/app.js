@@ -37560,7 +37560,13 @@ var render = function () {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(videogame.rating))]),
             _vm._v(" "),
-            _vm.user ? _c("td", [_c("button", [_vm._v("Delete")])]) : _vm._e(),
+            _vm.user
+              ? _c(
+                  "a",
+                  { attrs: { href: "/api/videogame/delete/" + videogame.id } },
+                  [_vm._v(" delete")]
+                )
+              : _vm._e(),
           ])
         }),
       ],
@@ -49829,6 +49835,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+console.log("ciao");
 
 var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
 

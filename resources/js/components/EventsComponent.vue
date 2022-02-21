@@ -12,7 +12,7 @@
                 <td>{{videogame.titolo}}</td>
                 <td>{{videogame.sottotitolo}}</td>
                 <td>{{videogame.rating}}</td>
-                <td v-if="user"> <button>Delete</button> </td>
+                <a v-if="user" :href="`/api/videogame/delete/${videogame.id}`"> delete</a>
             </tr>
         </table>
     </div>
